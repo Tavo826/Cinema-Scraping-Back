@@ -6,6 +6,7 @@ import io.vertx.core.eventbus.EventBus;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -20,7 +21,7 @@ public class CommandController {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    @Path("/scrapmovies")
+    @Path("/create")
     public Response executor(CreateCinema command) {
         bus.publish(command.getType(), command);
         return Response.ok().build();

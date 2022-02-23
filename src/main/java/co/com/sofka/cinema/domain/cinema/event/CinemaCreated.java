@@ -7,14 +7,20 @@ import java.util.Map;
 
 public class CinemaCreated extends DomainEvent {
 
-    private final Map<String, List<List<String>>> movies;
+    private final String cinemaId;
+    private final String name;
 
-    public CinemaCreated(Map<String, List<List<String>>> movies) {
+    public CinemaCreated(String cinemaId, String name) {
         super("sofka.cinema.cinemacreated");
-        this.movies = movies;
+        this.cinemaId = cinemaId;
+        this.name = name;
     }
 
-    public Map<String, List<List<String>>> getMovies() {
-        return movies;
+    public String getCinemaId() {
+        return cinemaId;
+    }
+
+    public String getName() {
+        return name;
     }
 }

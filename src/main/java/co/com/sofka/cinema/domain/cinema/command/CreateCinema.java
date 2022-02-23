@@ -8,24 +8,22 @@ import java.util.Map;
 public class CreateCinema extends Command {
 
     private String cinemaId;
-    private Map<String, List<List<String>>> movies;
+    private String name;
 
-    public CreateCinema() {}
 
-    public String getId() {
+    public String getCinemaId() {
         return cinemaId;
     }
 
-    public void setId(String cinemaId) {
+    public void setCinemaId(String cinemaId) {
         this.cinemaId = cinemaId;
     }
 
-    public Map<String, List<List<String>>> getMovies() {
-        return movies;
+    public String getName() {
+        return name;
     }
 
-    public void setMovies(Map<String, List<List<String>>> movies) {
-        this.movies = movies;
+    public void setName(String name) {
+        this.name = name;
     }
-
 }

@@ -23,7 +23,7 @@ public class CinemaHandle {
         Map<String, Object> document = new HashMap<>();
 
         document.put("_id", event.getAggregateId());
-        document.put("movies", event.getMovies());
+        document.put("name", event.getName());
 
         mongoClient.getDatabase("queries")
                 .getCollection("cinema")

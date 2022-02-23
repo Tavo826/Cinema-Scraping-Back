@@ -10,17 +10,16 @@ import javax.enterprise.context.ApplicationScoped;
 @ApplicationScoped
 public class CreateCinemaHandle extends UseCaseHandle {
 
-    private CreateCinemaUseCase useCase;
+    private final CreateCinemaUseCase useCase;
 
     public CreateCinemaHandle(CreateCinemaUseCase useCase) {
         this.useCase = useCase;
     }
 
-    /*Consume el comando publicado en el entrypoint ("/scrapmovie")*/
     @ConsumeEvent(value = "sofka.cinema.create")
     void consumeBlocking(CreateCinema command) {
         var events = useCase.apply(command);
-        process(command.getType(), events);
+        process(command.getCinemaId(), events);
     }
 
 }

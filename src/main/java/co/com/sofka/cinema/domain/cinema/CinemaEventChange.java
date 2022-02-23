@@ -9,6 +9,7 @@ public class CinemaEventChange implements EventChange {
 
     protected CinemaEventChange(Cinema cinema) {
         listener((CinemaCreated event) -> {
+            cinema.name = event.getName();
             cinema.movies = new HashMap<>();
         });
     }

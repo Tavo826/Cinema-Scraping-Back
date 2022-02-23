@@ -1,6 +1,7 @@
 package co.com.sofka.cinema.infra.entrypoint;
 
 import com.mongodb.client.MongoClient;
+import com.mongodb.client.model.Filters;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 
@@ -26,13 +27,12 @@ public class QueryController {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("")
-    public Response get() {
+    @Path("/{id}")
+    public Response get(@PathParam("id") String cinemaId) {
         List<Document> documentList = new ArrayList<>();
-        Bson sort = descending("_id");
         mongoClient.getDatabase("queries")
                 .getCollection("cinema")
-                .find().sort(sort).limit(1)
+                .find(Filters.eq("_id", cinemaId))
                 .forEach(documentList::add);
         return Response.ok(documentList.stream().findAny()).build();
     }
