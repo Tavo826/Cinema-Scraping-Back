@@ -1,21 +1,32 @@
 package co.com.sofka.cinema.usecases;
 
 import co.com.sofka.cinema.domain.cinema.Cinema;
-import co.com.sofka.cinema.domain.cinema.command.CreateCinema;
+import co.com.sofka.cinema.domain.cinema.command.AddMovies;
 import co.com.sofka.cinema.domain.generic.DomainEvent;
+import co.com.sofka.cinema.domain.generic.EventStoreRepository;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
+import javax.enterprise.context.Dependent;
 import java.io.IOException;
 import java.util.*;
+import java.util.function.Function;
 
-/*
-public class ExtractMoviesUseCase implements Function<ExtractMovies, List<DomainEvent>> {
+@Dependent
+public class ExtractMoviesUseCase implements Function<AddMovies, List<DomainEvent>> {
 
     private static final String URL_BASE = "https://pelisplus.so/estrenos";
+    private final EventStoreRepository repository;
+
+    public ExtractMoviesUseCase(EventStoreRepository repository) {
+        this.repository = repository;
+    }
 
     @Override
-    public List<DomainEvent> apply(ExtractMovies command) {
+    public List<DomainEvent> apply(AddMovies command) {
+
+        var events = repository.getEventsBy("cinema", command.getCinemaId());
+        var cinema = Cinema.from(command.getCinemaId(), events);
 
         Map<String, List<List<String>>> movies;
 
@@ -30,11 +41,10 @@ public class ExtractMoviesUseCase implements Function<ExtractMovies, List<Domain
             (movies = new HashMap<>(movies1)).putAll(movies2);
 
         } catch (IOException e) {
-            throw new RuntimeException("Paila conexión");
+            throw new ExtractMoviesException();
         }
 
-        Cinema cinema = new Cinema(UUID.randomUUID().toString(), movies);
-
+        cinema.addMovies(movies);
         return cinema.getUncommittedChanges();
     }
 
@@ -86,7 +96,7 @@ public class ExtractMoviesUseCase implements Function<ExtractMovies, List<Domain
                 movies.put(document.select(nameSelect).text(), movieData);
 
             } catch (IOException e) {
-                throw new RuntimeException("Paila conexión");
+                throw new ExtractMoviesException();
             }
 
         });
@@ -96,4 +106,3 @@ public class ExtractMoviesUseCase implements Function<ExtractMovies, List<Domain
     }
 
 }
-*/

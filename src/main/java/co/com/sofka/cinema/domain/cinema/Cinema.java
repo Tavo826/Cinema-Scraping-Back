@@ -1,6 +1,7 @@
 package co.com.sofka.cinema.domain.cinema;
 
 import co.com.sofka.cinema.domain.cinema.event.CinemaCreated;
+import co.com.sofka.cinema.domain.cinema.event.MoviesAdded;
 import co.com.sofka.cinema.domain.generic.AggregateRoot;
 import co.com.sofka.cinema.domain.generic.DomainEvent;
 import co.com.sofka.cinema.domain.generic.EventChange;
@@ -30,9 +31,12 @@ public class Cinema extends AggregateRoot implements EventChange {
         return movie;
     }
 
-
-    public Map<String, List<List<String>>> movies() {
-        return movies;
+    public void addMovies(Map<String, List<List<String>>> movies) {
+        appendChange(new MoviesAdded(movies)).apply();
     }
 
+
+    public String name() {
+        return name;
+    }
 }

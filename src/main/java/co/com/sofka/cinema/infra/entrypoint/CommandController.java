@@ -1,5 +1,6 @@
 package co.com.sofka.cinema.infra.entrypoint;
 
+import co.com.sofka.cinema.domain.cinema.command.AddMovies;
 import co.com.sofka.cinema.domain.cinema.command.CreateCinema;
 import io.vertx.core.eventbus.EventBus;
 
@@ -23,6 +24,14 @@ public class CommandController {
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("/create")
     public Response executor(CreateCinema command) {
+        bus.publish(command.getType(), command);
+        return Response.ok().build();
+    }
+
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Path("/addMovies")
+    public Response executor(AddMovies command) {
         bus.publish(command.getType(), command);
         return Response.ok().build();
     }

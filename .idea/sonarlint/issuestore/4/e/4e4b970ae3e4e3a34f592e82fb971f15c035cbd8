@@ -1,17 +1,0 @@
-
-]	java:S125"<This block of commented-out lines of code should be removed.(õƒÉ¯øÿÿÿÿ8ŞÌØò/
-g
-java:S1128"ERemove this unused import 'co.com.sofka.cinema.domain.cinema.Cinema'.(ßÄĞüşÿÿÿÿ8ŞÌØò/
-p
-java:S1128"SRemove this unused import 'co.com.sofka.cinema.domain.cinema.command.CreateCinema'.(ÅáÉö8ŞÌØò/
-m
-java:S1128"KRemove this unused import 'co.com.sofka.cinema.domain.generic.DomainEvent'.(Š°°ıÿÿÿÿ8ŞÌØò/
-N
-java:S1128",Remove this unused import 'org.jsoup.Jsoup'.(Ù±šªûÿÿÿÿ8ŞÌØò/
-R
-java:S1128"5Remove this unused import 'org.jsoup.nodes.Document'.(ô¯É8êÌØò/
-R
-java:S1128	"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8êÌØò/
-C
-java:S1128
-"&Remove this unused import 'java.util'.(Î€ŒÙ8êÌØò/

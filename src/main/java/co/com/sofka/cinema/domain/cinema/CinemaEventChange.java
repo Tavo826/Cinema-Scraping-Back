@@ -1,6 +1,7 @@
 package co.com.sofka.cinema.domain.cinema;
 
 import co.com.sofka.cinema.domain.cinema.event.CinemaCreated;
+import co.com.sofka.cinema.domain.cinema.event.MoviesAdded;
 import co.com.sofka.cinema.domain.generic.EventChange;
 
 import java.util.HashMap;
@@ -11,6 +12,9 @@ public class CinemaEventChange implements EventChange {
         listener((CinemaCreated event) -> {
             cinema.name = event.getName();
             cinema.movies = new HashMap<>();
+        });
+        listener((MoviesAdded event) -> {
+            cinema.movies = event.getMovies();
         });
     }
 

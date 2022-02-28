@@ -5,6 +5,7 @@ co\com\sofka\cinema\infra\generic\AbstractSerializer$DateDeserializer.class
 co\com\sofka\cinema\domain\generic\EventChange.class
 co\com\sofka\cinema\domain\cinema\command\CreateCinema.class
 co\com\sofka\cinema\infra\generic\StoredEvent.class
+co\com\sofka\cinema\domain\cinema\event\MoviesAdded.class
 co\com\sofka\cinema\infra\generic\StoredEventSerializer.class
 co\com\sofka\cinema\domain\cinema\Cinema.class
 co\com\sofka\cinema\domain\generic\ChangeEventSubscriber.class
@@ -14,12 +15,16 @@ co\com\sofka\cinema\domain\generic\ChangeEventSubscriber$ChangeApply.class
 co\com\sofka\cinema\infra\generic\DeserializeException.class
 co\com\sofka\cinema\infra\repository\MongoEventStoreRepository.class
 co\com\sofka\cinema\domain\generic\DomainEvent.class
+co\com\sofka\cinema\usecases\ExtractMoviesUseCase.class
+co\com\sofka\cinema\usecases\ExtractMoviesException.class
 co\com\sofka\cinema\domain\generic\Command.class
 co\com\sofka\cinema\domain\cinema\event\CinemaCreated.class
 co\com\sofka\cinema\infra\entrypoint\SocketService.class
 co\com\sofka\cinema\infra\generic\EventSerializer.class
+co\com\sofka\cinema\infra\handle\AddMoviesHandle.class
 co\com\sofka\cinema\infra\message\BusService.class
 co\com\sofka\cinema\domain\cinema\CinemaEventChange.class
+co\com\sofka\cinema\domain\cinema\command\AddMovies.class
 co\com\sofka\cinema\infra\handle\CreateCinemaHandle.class
 co\com\sofka\cinema\domain\generic\AggregateRoot.class
 co\com\sofka\cinema\infra\generic\AbstractSerializer$DateSerializer.class
