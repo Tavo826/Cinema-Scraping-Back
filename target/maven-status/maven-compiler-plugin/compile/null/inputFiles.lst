@@ -21,6 +21,7 @@ C:\Users\gustavo.orozco\Documents\Codes\Intellij IDEA\Cinema-Scraping-Back\src\m
 C:\Users\gustavo.orozco\Documents\Codes\Intellij IDEA\Cinema-Scraping-Back\src\main\java\co\com\sofka\cinema\domain\generic\DomainEvent.java
 C:\Users\gustavo.orozco\Documents\Codes\Intellij IDEA\Cinema-Scraping-Back\src\main\java\co\com\sofka\cinema\infra\generic\DeserializeException.java
 C:\Users\gustavo.orozco\Documents\Codes\Intellij IDEA\Cinema-Scraping-Back\src\main\java\co\com\sofka\cinema\infra\message\BusService.java
+C:\Users\gustavo.orozco\Documents\Codes\Intellij IDEA\Cinema-Scraping-Back\src\main\java\co\com\sofka\cinema\usecases\ExtractMoviesException.java
 C:\Users\gustavo.orozco\Documents\Codes\Intellij IDEA\Cinema-Scraping-Back\src\main\java\co\com\sofka\cinema\infra\entrypoint\QueryController.java
 C:\Users\gustavo.orozco\Documents\Codes\Intellij IDEA\Cinema-Scraping-Back\src\main\java\co\com\sofka\cinema\infra\generic\UseCaseHandle.java
 C:\Users\gustavo.orozco\Documents\Codes\Intellij IDEA\Cinema-Scraping-Back\src\main\java\co\com\sofka\cinema\domain\cinema\event\MoviesAdded.java

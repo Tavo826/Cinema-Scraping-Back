@@ -36,7 +36,7 @@ public class CinemaHandle {
     @ConsumeEvent(value = "sofka.cinema.moviesadded", blocking = true)
     void consumeMoviesAdded(MoviesAdded event) {
         BasicDBObject document = new BasicDBObject();
-        document.put("movies.movies", event.getMovies());
+        document.put("movies", event.getMovies());
 
         BasicDBObject updateObject = new BasicDBObject();
         updateObject.put("$set", document);

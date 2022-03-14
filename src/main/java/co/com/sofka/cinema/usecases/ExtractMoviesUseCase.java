@@ -11,6 +11,7 @@ import javax.enterprise.context.Dependent;
 import java.io.IOException;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 @Dependent
 public class ExtractMoviesUseCase implements Function<AddMovies, List<DomainEvent>> {
