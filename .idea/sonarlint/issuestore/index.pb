@@ -17,9 +17,6 @@ w
 Gsrc/main/java/co/com/sofka/cinema/infra/generic/AbstractSerializer.java,d/d/dda22b9a2a81857815a0a1c57544703852acd290
 p
 @src/main/java/co/com/sofka/cinema/infra/generic/StoredEvent.java,e/d/ed9e9caa745a8653b670f7b65ff048f7c4ed73d4
-:
-
-Dockerfile,6/6/6651ddff6eb82c840ced7c1dddee15c6e1913dd4
 t
 Dsrc/main/java/co/com/sofka/cinema/infra/generic/EventSerializer.java,f/8/f8e4c38043f87d500d7d3bcf80ac2bcc6575506b
 o
@@ -28,8 +25,6 @@ s
 Csrc/main/java/co/com/sofka/cinema/usecases/CreateCinemaUseCase.java,6\9\69e8a5c0b4961b98924e5b958a2438b90b2a11b1
 Å
 Qsrc/main/java/co/com/sofka/cinema/infra/repository/MongoEventStoreRepository.java,d\0\d091812ffefe197fb0c3db07af512e3e48a51b6b
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 k
 ;src/main/java/co/com/sofka/cinema/domain/cinema/Cinema.java,2\a\2a7cf83e06a62856e09ad13db708bc6544020ee9
 v
@@ -56,3 +51,7 @@ y
 Isrc/main/java/co/com/sofka/cinema/domain/cinema/command/CreateCinema.java,5\7\573bc5f079880a0f73e8bd68248e970001654738
 v
 Fsrc/main/java/co/com/sofka/cinema/usecases/ExtractMoviesException.java,f\e\fe74c6cff02d5b2d3d4dd540bdc0c83f033b0799
+A
+system.properties,a\5\a5db35984da8ffa0e255c16a2e31ae7b26e7d222
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec

@@ -79,6 +79,7 @@ public class ExtractMoviesUseCase implements Function<AddMovies, List<DomainEven
                 List<String> linksSubtitulado = new ArrayList<>();
                 List<String> linksCastellano = new ArrayList<>();
 
+                movieBasicInfo.add(document.select(nameSelect).text());
                 movieBasicInfo.add(document.select(imgSelect).attr("src"));
                 movieBasicInfo.add(document.select(yearSelect).text());
                 movieBasicInfo.add(document.select(durationSelect).text());
